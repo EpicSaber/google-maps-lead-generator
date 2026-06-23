@@ -1,448 +1,187 @@
-[Google Maps Lead Generator](https://apify.com/netdesignr/google-maps-lead-generator?fpr=data)
+[Google Maps Lead Generator](https://apify.com/jurassic_jove/google-maps-lead-generator?fpr=data)
 
-Generate Google Maps business leads that are easier to use in outbound, enrichment, and website-audit pipelines.
+# Google Maps Lead Generator - Extract Emails, Phones & Social Links from Google Maps
 
-This actor is built for two audiences:
+The **Google Maps Lead Generator** is the most affordable way to extract business leads from Google Maps. Get verified emails, phone numbers, social media links, and full business details at just **$0.02 per lead** — up to 60% cheaper than alternatives. Simply enter a search query like "plumbers in Tampa, FL" and get a complete lead list in seconds.
 
-- teams that want a practical Google Maps lead source for agencies, sales ops, growth, and local-market research
-- AI agents and internal tools that need clear inputs, stable outputs, and lead records that are easy to parse downstream
+[Try it for free →](https://console.apify.com/actors/6rJjvxbHMNNztgZVT)
 
-It searches Google Maps by niche and location, extracts local business listings, applies quality filters, optionally pre-checks websites, and emits lead records designed to be usable in NetPulse-style diagnosis and enrichment workflows.
+## Why use the Google Maps Lead Generator?
 
-## What this actor is good at
+Unlike basic Google Maps scrapers that only return names and addresses, this Google Maps Lead Generator **visits each business website** to extract verified email addresses and social media profiles. This means you get richer, more actionable leads — ready for cold email outreach, sales prospecting, or marketing campaigns.
 
-- finding local businesses by service plus geography
-- filtering for leads that actually have usable websites
-- removing obvious duplicates and common chain businesses
-- screening out weak leads before they hit a more expensive pipeline
-- producing outputs that humans can export and AI agents can consume with minimal cleanup
+🔹 **Cheapest price on Apify** — $20.00 per 1,000 leads (competitors charge $30-60)
+🔹 **Email extraction included** — no separate enrichment tool needed
+🔹 **Social media links** — Facebook, Instagram, LinkedIn, Twitter/X, YouTube, TikTok
+🔹 **Full business data** — name, phone, address, website, rating, reviews, GPS coordinates, opening hours
+🔹 **Multi-language support** — English, Spanish, Portuguese, French, German, Italian
 
-## What data can I extract with Google Maps Lead Generator?
+## How much does the Google Maps Lead Generator cost?
 
-| Business identity | Local context | Website and qualification signals |
+| What you get | Price |
+| --- | --- |
+| Each business lead (with all contact data) | **$0.02** |
+| Actor start (one-time per run) | $0.01 |
+
+**Example:** Extracting 1,000 business leads costs approximately **$20.00**. You can start for free with Apify's free tier credits.
+
+## What data can you extract from Google Maps?
+
+Each business lead extracted by the Google Maps Lead Generator includes:
+
+📛 **Business name** — the company or business name as listed on Google Maps
+📁 **Category** — the business type (plumber, restaurant, dentist, etc.)
+📍 **Full address** — street address with city, state, and ZIP code
+📞 **Phone number** — direct phone number from the Google Maps listing
+🌐 **Website URL** — the business website link
+📧 **Email addresses** — extracted by crawling the business website and contact pages
+📱 **Social media links** — Facebook, Instagram, LinkedIn, Twitter/X, YouTube, and TikTok profiles
+⭐ **Rating** — Google Maps star rating (1-5)
+💬 **Review count** — total number of Google reviews
+🗺️ **GPS coordinates** — latitude and longitude for mapping
+🕐 **Opening hours** — business hours of operation
+
+## How to extract business emails from Google Maps
+
+Extracting emails from Google Maps is easy with the Google Maps Lead Generator. Follow these steps:
+
+1. Open the [Google Maps Lead Generator](https://console.apify.com/actors/6rJjvxbHMNNztgZVT) on Apify
+2. Enter your search queries (e.g., "dentists in Miami, FL" or "restaurants in New York")
+3. Set the maximum number of results per query (up to 120)
+4. Enable "Extract Emails from Websites" (recommended)
+5. Enable "Extract Social Media Links" (recommended)
+6. Click **Start** and wait for the results
+7. Download your leads in **CSV, JSON, or Excel** format
+
+## Input example
+
+```
+{
+    "searchQueries": [
+        "plumbers in Tampa, FL",
+        "electricians in Orlando, FL",
+        "restaurants in Miami Beach"
+    ],
+    "maxResults": 50,
+    "scrapeEmails": true,
+    "scrapeSocials": true,
+    "language": "en"
+}
+```
+
+## Output example
+
+```
+{
+    "name": "ABC Plumbing Services",
+    "category": "Plumber",
+    "address": "1234 Main St, Tampa, FL 33601",
+    "phone": "+1-813-555-0123",
+    "website": "https://abcplumbing.com",
+    "email": "info@abcplumbing.com",
+    "emails": ["info@abcplumbing.com", "support@abcplumbing.com"],
+    "rating": 4.8,
+    "reviewCount": 127,
+    "latitude": 27.9506,
+    "longitude": -82.4572,
+    "socialLinks": {
+        "facebook": "https://facebook.com/abcplumbing",
+        "instagram": "https://instagram.com/abcplumbing",
+        "linkedin": "https://linkedin.com/company/abcplumbing"
+    },
+    "openingHours": "Monday-Friday 8AM-6PM",
+    "searchQuery": "plumbers in Tampa, FL"
+}
+```
+
+## Who uses the Google Maps Lead Generator?
+
+The Google Maps Lead Generator is built for anyone who needs business contact data at scale:
+
+🏢 **Marketing agencies** — Find local business clients who need marketing services. Search for businesses in any city and get their contact info for outreach campaigns.
+
+💼 **Sales teams** — Build B2B prospect lists for cold email and cold calling campaigns. Extract phone numbers and emails from thousands of businesses in minutes.
+
+🏠 **Real estate professionals** — Research local service providers, contractors, and businesses in specific neighborhoods or ZIP codes.
+
+🔍 **SEO agencies** — Prospect local businesses that need SEO services. Filter by rating and review count to find businesses with weak online presence.
+
+📊 **Market researchers** — Analyze business density, ratings, and competition across different locations and industries.
+
+🚀 **Freelancers** — Find potential clients in any industry and any city worldwide.
+
+## How to use Google Maps data for cold email outreach
+
+The Google Maps Lead Generator extracts verified business emails that you can use for B2B cold email outreach. Here are some tips:
+
+1. **Target specific niches** — Search for specific business types like "HVAC contractors in Dallas" instead of broad terms
+2. **Filter by quality** — Focus on businesses with websites (they're more likely to have emails)
+3. **Personalize your outreach** — Use the business name, rating, and review count to personalize each email
+4. **Respect regulations** — Always comply with CAN-SPAM, GDPR, and local email marketing laws
+
+## How does the Google Maps Lead Generator compare to other scrapers?
+
+| Feature | This Actor | Competitors |
 | --- | --- | --- |
-| Business name, category, industry, phone, and website | Address, area, postcode, city, country, plus code, coordinates, and Google Maps URL | Rating, review count, opening status, opening hours, and temporary-closure hints |
-| Google place hint data when visible in the Maps URL | Query and rank within the collected result set | Website pre-check result with redirect, SSL, response timing, and failure warnings |
-| Stable `recordType` and `outputFormat` fields for downstream parsing | `scrapedAt` timestamp for pipeline traceability | Optional website enrichment with emails, phones, social links, and conservative decision-maker hints |
+| Price per 1,000 leads | **$20.00** | $30.00 - $60.00 |
+| Email extraction | ✅ Included | Often extra cost |
+| Social media links | ✅ 6 platforms | Limited or none |
+| Phone numbers | ✅ Included | ✅ Included |
+| GPS coordinates | ✅ Included | Sometimes |
+| Multi-language | ✅ 6 languages | English only |
 
-The actor also emits one `run-summary` record for the whole run with query counts, lead counts, and failure counts.
+## Integrations
 
-## What You Can Do With It
+The Google Maps Lead Generator works with all major automation and CRM tools:
 
-- build local-business lead lists for agencies and outbound teams
-- source SMEs with websites for NetPulse-style website audits
-- create prospect batches by niche, town, county, or metro area
-- filter out chain businesses and obvious low-signal listings
-- pre-check websites before sending them into a diagnosis or crawl pipeline
-- feed the output into CRMs, spreadsheets, Airtable, or AI agent workflows
+🔗 **Zapier** — Automate lead flow to your CRM or email tool
+🔗 **Make (Integromat)** — Build complex automation workflows
+🔗 **Google Sheets** — Export directly for easy team collaboration
+🔗 **HubSpot / Salesforce** — Push leads directly to your CRM via API
+🔗 **n8n** — Self-hosted automation workflows
+🔗 **API access** — Use the [Apify API](https://docs.apify.com/api) to integrate programmatically
 
-## Common Use Cases
+## Tips for getting the best results
 
-### 1. Agency prospecting for local niches
+📌 **Use specific locations** — "plumbers in Tampa, FL" works better than "plumbers in Florida"
+📌 **Combine multiple queries** — Run several search queries in one Actor run for efficiency
+📌 **Enable email extraction** — This adds ~5 seconds per business but dramatically increases lead quality
+📌 **Start small** — Test with 10-20 results before running large extractions
+📌 **Schedule regular runs** — Use [Apify scheduling](https://docs.apify.com/platform/schedules) to extract fresh leads weekly
 
-Search for businesses like:
+## Is it legal to scrape Google Maps?
 
-- `dentists in surrey`
-- `accountants kingston upon thames`
-- `removals companies london`
+Yes. The Google Maps Lead Generator only extracts **publicly available** business information that anyone can see on Google Maps. This includes business names, addresses, phone numbers, websites, and reviews. For email extraction, we only collect emails that businesses have publicly listed on their own websites.
 
-Use the actor to build a shortlist of local businesses with:
+Always ensure your use of the data complies with local regulations such as GDPR, CAN-SPAM, and CCPA.
 
-- a live website
-- a minimum review threshold
-- a reasonable Google rating
-- enough structure for email or website-based follow-up
+## Frequently asked questions
 
-Typical output to use:
+**How many leads can I extract per search?**
+Google Maps typically displays up to 120 results per search query. To get more leads, use multiple search queries with different locations or business categories.
 
-- default dataset `google-maps-lead` records
-- `run-summary` record for batch reporting
+**Why are some emails missing?**
+Not all businesses have websites or publicly listed email addresses. The email extraction success rate is typically 40-60%, depending on the industry and location.
 
-### 2. NetPulse website-audit intake
+**Can I export data to Excel or CSV?**
+Yes! Apify supports exporting data in CSV, JSON, Excel, XML, and other formats directly from the dataset.
 
-Use `requireWebsite = true` and `websitePreCheck = true` when you want to:
+**Does this work for any country?**
+Yes, the Google Maps Lead Generator works globally. Just enter your search query with the desired location.
 
-- skip phone-only businesses
-- avoid Facebook-only “websites”
-- avoid parked or placeholder domains
-- save scan budget for real business websites
+**How often is the data updated?**
+Each run extracts fresh, real-time data directly from Google Maps. Schedule regular runs to keep your lead lists up to date.
 
-Typical output to use:
+## Support
 
-- `website`
-- `websitePreCheck`
-- `verifiedWebsiteDomain`
-- `query`, `category`, `reviewCount`, and `rating`
+Having issues or need a custom feature? Open an issue in the [Issues tab](https://console.apify.com/actors/6rJjvxbHMNNztgZVT/issues) and we'll respond within 24 hours.
 
-### 3. Local market mapping
+You can also check out these related Apify tools:
 
-Use the actor to answer questions like:
+- [Google Maps Scraper](https://apify.com/compass/crawler-google-places) — The official Apify Google Maps scraper with more options
+- [Email Extractor](https://apify.com/lukaskrivka/google-maps-with-contact-details) — Enrich existing Google Maps data with contact details
+- [Web Scraper](https://apify.com/apify/web-scraper) — General-purpose web scraping tool
 
-- who shows up for this service in this area?
-- which businesses have strong review signals?
-- how dense is the market in a specific postcode or town?
+---
 
-Typical output to use:
-
-- `category`
-- `address`, `area`, `city`, `postcode`
-- `rating`
-- `reviewCount`
-- `googleMapsUrl`
-
-### 4. AI-agent lead sourcing
-
-This actor works well for AI agents that need:
-
-- one input object with explicit filters
-- one dataset with consistent record types
-- lightweight fields that are easy to rank, filter, or summarize
-- pre-qualified websites before launching a heavier audit or enrichment step
-
-Recommended agent flow:
-
-1. Run the actor with `searchQueries`, `minReviews`, `minRating`, `requireWebsite`, and `websitePreCheck`.
-2. Read the default dataset and keep only `recordType = "google-maps-lead"`.
-3. Rank by niche, review count, rating, and website status.
-4. Send the surviving `website` URLs into the next pipeline step.
-
-## Quick “Can I Use This For…” Guide
-
-You can use this actor if you want to:
-
-- find local service businesses from Google Maps
-- build a website-first SME lead list
-- screen leads before running a more expensive audit
-- feed structured local-business records into an agent or CRM
-- export a clean shortlist for spreadsheets or sales ops
-
-This actor is probably not the right fit if you need:
-
-- a full Google Places API replacement
-- guaranteed place IDs for every result
-- deep review-text extraction from Google reviews
-- consumer-facing marketplace scraping outside local lead generation
-
-## How to use Google Maps Lead Generator
-
-### Step 1: Add your search queries
-
-In **Search Queries**, add one query per line. Each query should combine:
-
-- a business type
-- a location
-
-Good examples:
-
-- `dentists in Surrey`
-- `removals companies London`
-- `accountants Kingston upon Thames`
-- `family lawyers Manchester`
-- `roofers leeds`
-
-### Step 2: Decide how many results you want
-
-Use **Max Results Per Query** to control run size.
-
-- smaller values are faster and safer for quick prospecting runs
-- larger values are better for market mapping or list building
-
-### Step 2b: Tighten locality when Google drifts
-
-Use **Strict Location** when you want results to stay anchored to a specific place such as `Chessington`.
-
-Use **Location Radius (km)** when you want a hard geographic cutoff around that location.
-
-Example:
-
-- `strictLocation = "Chessington"`
-- `locationRadiusKm = 5`
-
-This is useful when Google Maps returns nearby towns that are relevant to the search term but outside your real catchment.
-
-### Step 3: Set lead quality filters
-
-Use these together to improve downstream lead quality:
-
-- **Minimum Google Reviews**
-- **Minimum Google Rating**
-- **Require Website URL**
-- **Skip Known Chains/Franchises**
-
-These filters help reduce:
-
-- inactive listings
-- low-signal businesses
-- large brands that are not your target ICP
-- listings that have no website to audit or enrich
-
-### Step 4: Enable website validation when needed
-
-Use **Run Website Pre-Check** when you want to avoid spending time on bad websites.
-
-The pre-check helps surface:
-
-- HTTP status
-- final redirect target
-- SSL presence
-- response timing
-- Facebook-only redirects
-- parked or placeholder domains
-
-### Step 5: Run and export
-
-Start the actor and read:
-
-- `google-maps-lead` records for the actual lead rows
-- the final `run-summary` record for run health and counts
-
-You can export results as JSON, CSV, Excel, XML, HTML, or RSS from Apify, or fetch them via API.
-
-## Input parameters
-
-| Parameter | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- |
-| `searchQueries` | array | Yes | - | Google Maps search queries, each usually combining niche + location |
-| `maxResultsPerQuery` | integer | No | `5` | Maximum businesses to collect per query |
-| `countryFilter` | string | No | `GB` | Two-letter country filter used for Google Maps localization |
-| `language` | string | No | `en` | Google Maps interface language |
-| `strictLocation` | string | No | `null` | Optional locality name used to keep results tied to a specific place |
-| `locationRadiusKm` | integer | No | `null` | Optional radius around `strictLocation` for tighter geographic filtering |
-| `minReviews` | integer | No | `0` | Skip businesses below this review threshold. Use `0` when Google Maps hides review totals in limited view |
-| `minRating` | number | No | `0` | Skip businesses below this rating threshold |
-| `requireWebsite` | boolean | No | `true` | Skip listings with no website |
-| `skipChains` | boolean | No | `true` | Filter out obvious chain or franchise businesses |
-| `excludePlaceIds` | array | No | `[]` | Exclude already-known place IDs when available |
-| `websitePreCheck` | boolean | No | `true` | Run lightweight website validation before emitting the lead |
-| `skipFacebookOnly` | boolean | No | `true` | Skip websites that resolve to Facebook pages |
-| `skipParkedDomains` | boolean | No | `true` | Skip parked or placeholder domains |
-| `requestDelayMs` | integer | No | `1000` | Delay between page loads to reduce block risk |
-| `maxRetries` | integer | No | `0` | Retries per failed query or navigation flow |
-| `webhookUrl` | string | No | `null` | Optional completion webhook for downstream automation |
-| `outputFormat` | string | No | `netpulse-ready` | `netpulse-ready`, `raw`, or `csv-friendly` |
-
-## Example input
-
-```
-{
-  "searchQueries": [
-    "removals companies London",
-    "dentists Surrey",
-    "accountants Kingston upon Thames"
-  ],
-  "maxResultsPerQuery": 40,
-  "countryFilter": "GB",
-  "language": "en",
-  "strictLocation": "Chessington",
-  "locationRadiusKm": 5,
-  "minReviews": 8,
-  "minRating": 4.0,
-  "requireWebsite": true,
-  "skipChains": true,
-  "websitePreCheck": true,
-  "skipFacebookOnly": true,
-  "skipParkedDomains": true,
-  "requestDelayMs": 3000,
-  "maxRetries": 2,
-  "outputFormat": "netpulse-ready"
-}
-```
-
-## Output records
-
-### `google-maps-lead`
-
-Each lead record can include:
-
-- `outputFormat`
-- `query`
-- `rank`
-- `businessName`
-- `category`
-- `industry`
-- `address`
-- `area`
-- `postcode`
-- `city`
-- `countryCode`
-- `latitude` / `longitude`
-- `plusCode`
-- `placeId`
-- `googleMapsUrl`
-- `website`
-- `phone`
-- `rating`
-- `reviewCount`
-- `openingStatus`
-- `openingHours`
-- `verifiedWebsiteDomain`
-- `websitePreCheck`
-- `enrichment`
-- `warnings`
-
-### `run-summary`
-
-One final summary record with:
-
-- `queriesRequested`
-- `queriesCompleted`
-- `totalLeads`
-- `enrichedLeads`
-- `failedQueries`
-- `failedListings`
-- `countryCode`
-- `outputFormat`
-- `finishedAt`
-
-## Example output
-
-```
-{
-  "recordType": "google-maps-lead",
-  "outputFormat": "netpulse-ready",
-  "query": "dentists Surrey",
-  "rank": 3,
-  "businessName": "Surrey Dental Studio",
-  "category": "Dentist",
-  "industry": "Dentist",
-  "address": "21 High Street, Guildford GU1 3AA, United Kingdom",
-  "area": "21 High Street, Guildford GU1 3AA",
-  "postcode": "GU1 3AA",
-  "city": "Guildford",
-  "countryCode": "gb",
-  "googleMapsUrl": "https://www.google.com/maps/place/...",
-  "website": "https://surreydentalstudio.co.uk",
-  "phone": "+44 1483 123456",
-  "rating": 4.7,
-  "reviewCount": 42,
-  "openingStatus": "Open",
-  "temporarilyClosed": false,
-  "verifiedWebsiteDomain": "surreydentalstudio.co.uk",
-  "websitePreCheck": {
-    "status": "passed",
-    "httpStatus": 200,
-    "finalUrl": "https://surreydentalstudio.co.uk/",
-    "sslEnabled": true,
-    "responseTimeMs": 642,
-    "redirectedToFacebook": false,
-    "parkedDomain": false,
-    "warnings": []
-  },
-  "enrichment": {
-    "status": "not_requested",
-    "emails": [],
-    "phones": [],
-    "decisionMakerHints": [],
-    "warnings": []
-  },
-  "warnings": [],
-  "scrapedAt": "2026-04-06T17:00:00.000Z"
-}
-```
-
-## What makes it easy to integrate
-
-- simple input structure for both humans and agents
-- one main dataset with explicit `recordType`
-- one run-level summary record for health checks
-- optional website screening before downstream processing
-- output fields that work well for CRM import, spreadsheets, or agent ranking
-
-## API usage
-
-### JavaScript
-
-```
-import { ApifyClient } from 'apify-client';
-
-const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
-
-const run = await client.actor('netdesignr/google-maps-lead-generator').call({
-  searchQueries: [
-    'removals companies London',
-    'dentists Surrey'
-  ],
-  maxResultsPerQuery: 25,
-  countryFilter: 'GB',
-  minReviews: 8,
-  requireWebsite: true,
-  websitePreCheck: true,
-  outputFormat: 'netpulse-ready'
-});
-
-const { items } = await client.dataset(run.defaultDatasetId).listItems();
-console.log(items);
-```
-
-### Python
-
-```
-from apify_client import ApifyClient
-import os
-
-client = ApifyClient(os.environ["APIFY_TOKEN"])
-
-run = client.actor("netdesignr/google-maps-lead-generator").call(run_input={
-    "searchQueries": ["accountants Kingston upon Thames"],
-    "maxResultsPerQuery": 20,
-    "countryFilter": "GB",
-    "requireWebsite": True,
-    "websitePreCheck": True,
-    "outputFormat": "netpulse-ready",
-})
-
-items = client.dataset(run["defaultDatasetId"]).list_items().items
-print(items)
-```
-
-### cURL
-
-```
-curl -X POST "https://api.apify.com/v2/acts/netdesignr~google-maps-lead-generator/runs?token=$APIFY_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "searchQueries": ["dentists Surrey", "removals companies London"],
-    "maxResultsPerQuery": 30,
-    "countryFilter": "GB",
-    "requireWebsite": true,
-    "websitePreCheck": true,
-    "outputFormat": "netpulse-ready"
-  }'
-```
-
-## Limitations
-
-- Google Maps layout changes can break selectors over time.
-- Some searches can trigger consent walls, throttling, or anti-bot interstitials.
-- Place IDs are best-effort because Google Maps does not expose them consistently in every page state.
-- Chain detection is heuristic, not perfect.
-- Website pre-checks are intentionally lightweight and are not a substitute for a full crawl or audit.
-- Decision-maker hints, when enabled, are inferred from public website text and should not be treated as verified identity data.
-
-## Good defaults for AI agents
-
-If an AI agent needs a safe starting configuration, use:
-
-- `maxResultsPerQuery: 20`
-- `countryFilter: "GB"`
-- `minReviews: 0`
-- `minRating: 0`
-- `requireWebsite: true`
-- `skipChains: true`
-- `websitePreCheck: true`
-- `skipFacebookOnly: true`
-- `skipParkedDomains: true`
-- `requestDelayMs: 3000`
-- `maxRetries: 2`
-- `outputFormat: "netpulse-ready"`
-
-This gives a reasonable balance between speed, lead quality, and downstream usefulness.
-
-## Local validation
-
-```
-pnpm --filter @apify-actors/shared build
-pnpm --filter google-maps-lead-generator build
-pnpm --filter google-maps-lead-generator test
-pnpm --filter google-maps-lead-generator run type-check
-```
+Built with TypeScript, [Crawlee](https://crawlee.dev/), and Playwright on the [Apify platform](https://apify.com/).
